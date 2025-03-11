@@ -16,7 +16,6 @@ parser.add_argument("topology", help="Topology PDB file from OpenMM")
 parser.add_argument("trajectory", help="Trajectory file")
 args = parser.parse_args()
 
-# KEEP all the hardcoded output file names as this is how your script will be graded.
 print('Starting MD analysis...')
 
 # preprocess trajectory
@@ -54,7 +53,7 @@ plt.legend()
 plt.savefig('rmsd-sim.png')
 plt.close()
 
-# RMSF Calculations
+# RMSF calculations
 # compute RMSF for every protein atom (for writing to pdb file)
 u_rmsf = MDAnalysis.Universe(args.topology, args.trajectory)
 protein_rmsf = u_rmsf.select_atoms('protein')
