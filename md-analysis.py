@@ -96,8 +96,8 @@ protein_rmsf.atoms.tempfactors = rmsf_all_analysis.rmsf
 # write out a PDB file with tempfactors set
 protein_rmsf.atoms.write('rmsf.pdb')
 
-# run next two analyses on residue 62
-r = u_rmsd.select_atoms('protein and resid 62')
+# run next two analyses on residue 61
+r = u_rmsd.select_atoms('protein and resid 61')
 
 # ramachandran analysis
 print('Running Ramachandran analysis...')
